@@ -1,0 +1,26 @@
+---
+- name: Create OCS Storage on OCP
+  hosts: localhost
+  gather_facts: false
+  collections:
+    - community.kubernetes
+
+  tasks:
+    - name: Openshift-storage Namespace
+      community.kubernetes.k8s:
+        state: present
+        definition:
+          apiVersion: route.openshift.io/v1
+          kind: Route
+          metadata:
+            labels:
+              app: sb-beer
+            name: sb-beer
+          spec:
+            port:
+              targetPort: 8080-tcp
+            to:
+              kind: Service
+              name: sb-beer
+              weight: 100
+        validate_certs: false
