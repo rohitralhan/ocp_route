@@ -6,8 +6,8 @@
     - community.kubernetes
 
   tasks:
-    - name: Openshift-storage Namespace
-      community.kubernetes.k8s:
+    - name: SBBeer
+      k8s:
         state: present
         definition:
           apiVersion: route.openshift.io/v1
