@@ -16,6 +16,7 @@
             labels:
               app: sb-beer
             name: sb-beer
+            namespace: pipelines-ws-tekton
           spec:
             port:
               targetPort: 8080-tcp
