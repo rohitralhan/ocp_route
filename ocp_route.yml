@@ -2,8 +2,8 @@
 - name: Create Route on OCP
   hosts: localhost
   gather_facts: false
-  #vars:
-  #  - ansible_python_interpreter: /usr/bin/python3
+  vars:
+    - ansible_python_interpreter: /usr/bin/python3
   collections:
     - community.kubernetes==1.2.1
   tasks:
