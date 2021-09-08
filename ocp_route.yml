@@ -5,7 +5,7 @@
   # vars:
   #  - ansible_python_interpreter: /usr/bin/python3
   collections:
-    - community.kubernetes==1.2.1
+    - community.kubernetes
   tasks:
     - name: SBBeer
       k8s:
